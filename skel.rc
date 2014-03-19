@@ -1,0 +1,226 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// “ú–{Œê resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 399, 216
+STYLE WS_CHILD
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN"
+BEGIN
+    EDITTEXT        IDC_NAME0,21,17,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME1,21,37,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME2,21,57,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME3,21,78,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME4,21,98,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME5,21,118,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME6,21,138,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME7,21,157,37,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMPORT,40,191,38,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_BAUDRATE,114,191,25,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_OFFSET,164,191,25,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_OFFSET_C,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,189,189,10,17
+    PUSHBUTTON      "Clear",IDC_CLEAR,215,191,50,14
+    PUSHBUTTON      "Disconnect",IDCANCEL,270,191,50,14
+    DEFPUSHBUTTON   "Connect",IDOK,323,191,50,14
+    CONTROL         "",IDC_PICTURE,"Static",SS_BLACKFRAME,61,13,331,161
+    GROUPBOX        "Serial port setting",IDC_STATIC,7,177,385,36
+    LTEXT           "comport:",IDC_STATIC,12,193,27,9
+    LTEXT           "baudrate:",IDC_STATIC,85,193,27,9
+    CTEXT           "pos:",IDC_STATIC,146,193,14,9
+    CTEXT           "115",IDC_PIN0,5,19,14,9
+    CTEXT           "117",IDC_PIN1,5,40,14,9
+    CTEXT           "113",IDC_PIN2,5,60,14,9
+    CTEXT           "114",IDC_PIN3,5,80,14,9
+    CTEXT           "111",IDC_PIN4,5,101,14,9
+    CTEXT           "112",IDC_PIN5,5,121,14,9
+    CTEXT           "109",IDC_PIN6,5,140,14,9
+    CTEXT           "110",IDC_PIN7,5,160,14,9
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 139, 96
+STYLE DS_CENTER | WS_POPUP | WS_THICKFRAME
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN"
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,17,13,20,21,SS_SUNKEN
+    CTEXT           "Serial Probe    130227 by K.I",IDC_STATIC,17,47,107,34,
+                    SS_CENTERIMAGE | SS_SUNKEN
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 406, 189
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "TimeCode Window"
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN"
+BEGIN
+    CTEXT           "0",IDC_COUNT0,17,17,16,9
+    CTEXT           "0",IDC_COUNT1,17,37,16,9
+    CTEXT           "0",IDC_COUNT2,17,57,16,9
+    CTEXT           "0",IDC_COUNT3,17,77,16,9
+    CTEXT           "0",IDC_COUNT4,17,97,16,9
+    CTEXT           "0",IDC_COUNT5,17,117,16,9
+    CTEXT           "0",IDC_COUNT6,17,137,16,9
+    CTEXT           "0",IDC_COUNT7,17,157,16,9
+    CTEXT           "",IDC_CODE0,38,17,16,9
+    CTEXT           "",IDC_CODE1,38,37,16,9
+    CTEXT           "",IDC_CODE2,38,57,16,9
+    CTEXT           "",IDC_CODE3,38,77,16,9
+    CTEXT           "",IDC_CODE4,38,97,16,9
+    CTEXT           "",IDC_CODE5,38,117,16,9
+    CTEXT           "",IDC_CODE6,38,137,16,9
+    CTEXT           "",IDC_CODE7,38,157,16,9
+    EDITTEXT        IDC_TABLE0,58,15,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME0,323,17,76,9
+    EDITTEXT        IDC_TABLE1,58,35,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME1,323,37,76,9
+    EDITTEXT        IDC_TABLE2,58,55,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME2,323,56,76,9
+    EDITTEXT        IDC_TABLE3,58,75,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME3,323,76,76,9
+    EDITTEXT        IDC_TABLE4,58,95,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME4,323,97,76,9
+    EDITTEXT        IDC_TABLE5,58,115,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME5,323,116,76,9
+    EDITTEXT        IDC_TABLE6,58,135,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME6,323,136,76,9
+    EDITTEXT        IDC_TABLE7,58,155,264,12,ES_AUTOHSCROLL
+    CTEXT           "0",IDC_TIME7,323,157,76,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 392
+        TOPMARGIN, 7
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 399
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "LogFile...(&L)",              IDM_LOGFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                    IDM_EXIT
+    END
+    MENUITEM "Edit(&E)",                    65535
+    POPUP "Option(&O)"
+    BEGIN
+        MENUITEM "TimeCode Window(&T)",         IDM_TIME
+        MENUITEM " Invert TimeCode(&I)",        IDM_TCODEINV
+        MENUITEM SEPARATOR
+        MENUITEM "Console(&C)",                 IDM_CONSOLE
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "About(&A)",                   IDM_ABOUT
+        MENUITEM "",                            ID_MENUITEM40011
+    END
+END
+
+#endif    // “ú–{Œê resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
