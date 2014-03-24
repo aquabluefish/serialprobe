@@ -67,6 +67,7 @@ typedef struct {
 	HWND		hConsole;
 	int			dlg1x,dlg1y;					// パネルの大きさ
 	int			dlg2x,dlg2y;					// パネルの大きさ
+	int			winx, winy;
 
 	str255		dut_port;						// 通信ポート名
 	int			dut_speed;						// 通信スピード

@@ -391,7 +391,7 @@ LRESULT CALLBACK AboutDlgProc(HWND hdlg, UINT msg, WPARAM wp, LPARAM lp)
 
 // Mainウィンドウ処理ルーチン
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
-	RECT rt;
+	RECT rt,crt,srt;
 	LPMINMAXINFO lpmm;
 
 	switch (msg) { 
@@ -416,6 +416,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
 			// ステータスバーを生成
 			g.hSbar = sbar_put(hWnd);
 
+
 			// タイマをセット（500ms）
 			SetTimer(hWnd,ID_MYTIMER,500,NULL);
 
@@ -427,23 +428,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
 			break;
 
 	case WM_SIZE:
-			// パネルの大きさに合わせて、Mainウィンドウサイズ（横幅のみ）調整
+			// Main Windowの大きさを求める
 			GetWindowRect(hWnd, &rt);
-	        MoveWindow(hWnd, rt.left, rt.top, rt.right-rt.left, 46+16+g.dlg1y, TRUE);		 //menubar46,statusbar16
+			GetClientRect(hWnd, &crt);
+			GetClientRect(g.hSbar, &srt);
+			g.winx = (rt.right - rt.left) - (crt.right - crt.left) + g.dlg1x;
+			g.winy = (rt.bottom - rt.top) - (crt.bottom - crt.top) + (srt.bottom - srt.top) + g.dlg1y;
+
+			// パネルの大きさに合わせて、Mainウィンドウサイズ（横幅のみ）調整
+			MoveWindow(hWnd, 0, 0, g.winx, g.winy, TRUE);
 
 			// ステータスバーの大きさを調整
 			sbar_size(g.hSbar,"100,100,80,60",wp,lp);
 			break;
 
-
 	case WM_GETMINMAXINFO:
 			// ウィンドウサイズの制限
 			lpmm = (LPMINMAXINFO)lp;
 			if (lpmm) {
-				lpmm->ptMinTrackSize.x = g.dlg1x;
-				lpmm->ptMinTrackSize.y = g.dlg1y;
-				lpmm->ptMaxTrackSize.x = 960;
-				lpmm->ptMaxTrackSize.y = 640;
+				lpmm->ptMinTrackSize.x = g.winx;
+				lpmm->ptMinTrackSize.y = g.winy;
+				lpmm->ptMaxTrackSize.x = g.winx;
+				lpmm->ptMaxTrackSize.y = g.winy;
 			}
 			break;
 
