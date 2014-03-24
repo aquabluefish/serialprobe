@@ -13,6 +13,7 @@
 TCHAR szTitle[100] = _T("SerialProbe");
 globaldata g;
 
+
 //////// シリアル通信用ルーチン記述開始 ////////
 //  rs_init_proc,rs_end_proc,rs_rcv_procの処理は、rs_threadから呼出される
 
