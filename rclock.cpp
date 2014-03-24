@@ -282,7 +282,7 @@ BYTE Crclock::dcf77_mmarker(BYTE tmark)
 
 BYTE Crclock::dcf77_sync(BYTE tmark)
 {
-	return (tt.pos==28|tt.pos==35|tt.pos==423|tt.pos==45|tt.pos==50||tt.pos==58);
+	return (tt.pos == 28 || tt.pos == 35 || tt.pos == 423 || tt.pos == 45 || tt.pos == 50 || tt.pos == 58);
 }
 
 void Crclock::dcf77_rec(BYTE time_in)
@@ -342,7 +342,7 @@ BYTE Crclock::msf_mmarker(BYTE tmark)
 
 BYTE Crclock::msf_sync(BYTE tmark)
 {
-	return (tt.pos==25|tt.pos==30|tt.pos==36|tt.pos==39|tt.pos==45||tt.pos==52);
+	return (tt.pos == 25 || tt.pos == 30 || tt.pos == 36 || tt.pos == 39 || tt.pos == 45 || tt.pos == 52);
 }
 
 void Crclock::msf_rec(BYTE time_in)
